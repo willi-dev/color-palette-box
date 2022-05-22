@@ -1,8 +1,17 @@
 {
-  "name": "color-palette",
+  "name": "color-palette-box",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/js/index.d.ts",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
@@ -17,10 +26,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build:lib": "yarn build:babel && yarn build:types && node ./scripts/copyTS.js",
+    "build:babel": "concurrently \"yarn build:babel:esm && yarn build:babel:umd\" \"yarn build:babel:cjs\"",
+    "build:babel:cjs": "BABEL_ENV=cjs babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/js --presets=@babel/env",
+    "build:babel:esm": "BABEL_ENV=esm babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/esm",
+    "build:babel:umd": "BABEL_ENV=umd babel --source-maps --extensions \".js\" dist/esm --out-dir dist/umd --plugins=transform-es2015-modules-umd",
+    "build:types": "tsc -p tsconfig.gen-dts.json",
+    "clean": "rimraf dist",
+    "develop": "yarn build:types && yarn build:babel:esm --skip-initial-build --watch --verbose"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +52,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/plugin-proposal-export-default-from": "^7.17.12",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-plugin-typescript-to-proptypes": "^2.0.0",
+    "concurrently": "^7.2.0"
   }
 }
