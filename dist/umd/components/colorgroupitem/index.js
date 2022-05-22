@@ -101,6 +101,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 10px 3px 0;
+    background: #FFFFFF;
   }
   .color-name, .color-code, .desc {
     color: rgba(51,51,51,0.6);
