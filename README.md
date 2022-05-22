@@ -1,2 +1,3 @@
 ## Color Palette Box
-![alt text](https://github.com/willi-dev/color-palette-box/static/blob/main/color-palette-box-preview.jpg?raw=true)
+
+![Screenshot](static/color-palette-box-preview.png)
