@@ -1,6 +1,18 @@
 {
   "name": "color-palette-box",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willi-dev/color-palette-box.git"
+  },
+  "keywords": [
+    "react",
+    "color-palette",
+    "design-system",
+    "storybook",
+    "mdx"
+  ],
   "main": "dist/js/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/js/index.d.ts",
