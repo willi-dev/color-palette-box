@@ -19,7 +19,7 @@
   "private": false,
   "publishConfig": {
     "access": "public",
-    "tag": "prerelease"
+    "tag": "latest"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
