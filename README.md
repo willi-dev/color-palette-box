@@ -19,6 +19,9 @@ yarn add color-palette-box
 
 **example**
 ```
+//import
+import { ColorPaletteGroup, ColorPaletteGroupItem } from 'color-palette-box'
+
 # create a list of your colors
 const list = [
   {
@@ -33,7 +36,7 @@ const list = [
   }
 ]
 
-
+// in your component render
 <ColorPaletteGroup title="title is optional">
   {
     list.map(( color, index ) => {
