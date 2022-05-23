@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","mappings":";;;;;;;;;;;;;;;;;;EAAA;IAAA;IAAA;MAAA;MAAA;QAAA;MAAA;IAAA;EAAA;EACA;IAAA;IAAA;MAAA;MAAA;QAAA;MAAA;IAAA;EAAA","names":[],"sources":["../../../src/components/index.ts"],"sourcesContent":["export * from './colorgrouplist'\nexport * from './colorgroupitem'"]}
