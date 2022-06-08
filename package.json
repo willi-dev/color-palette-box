@@ -20,6 +20,11 @@
     "start": "parcel watch",
     "build": "parcel build"
   },
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.18.0",
     "@babel/preset-env": "^7.18.0",
