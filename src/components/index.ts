@@ -1,2 +1,2 @@
-export * from './colorgrouplist'
-export * from './colorgroupitem'
+export { ColorPaletteGroup } from './colorgrouplist'
+export { ColorPaletteGroupItem } from './colorgroupitem'

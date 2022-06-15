@@ -1,1 +1,4 @@
-export * from './components';
+export {
+  ColorPaletteGroup,
+  ColorPaletteGroupItem
+} from './components';
